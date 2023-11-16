@@ -41,25 +41,17 @@ p {
     color: #555;
 }
 .collage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* creates a responsive grid layout */
+    grid-gap: 10px; /* space between images */
     margin-top: 20px;
+    padding: 0 10px; /* adds padding on the sides */
+    max-height: 400px; /* adjust based on your screen size */
+    overflow: hidden; /* hides parts that overflow */
 }
 
 .collage img {
-    flex: 1;
-    max-width: 200px; /* Base max-width, can be adjusted */
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
-
-/* Assigning random max-widths to each image */
-.collage img:nth-child(1) { max-width: 250px; }
-.collage img:nth-child(2) { max-width: 150px; }
-.collage img:nth-child(3) { max-width: 200px; }
-.collage img:nth-child(4) { max-width: 180px; }
-.collage img:nth-child(5) { max-width: 220px; }
-.collage img:nth-child(6) { max-width: 160px; }
-.collage img:nth-child(7) { max-width: 210px; }
